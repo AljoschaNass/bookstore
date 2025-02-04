@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: #021821;
+}
+
+.d_none{
+    display: none;
+}
+
+.d_flex{
+    display: flex;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #021821; 
+    border-radius: 4px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #7EB4C9; 
+    border-radius: 4px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #105063; 
+  }
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: #04242E;
+    color: white;
+    height: 64px;
+    padding-left: 24px;
+}
+
+.book_section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #0A3949;
+    border-radius: 16px;
+    height: 600px;
+    width: 450px;
+    margin: 12px auto;
+    color: white;
+}
+
+.seperator{
+    height: 2px;
+    width: 100%;
+    background-color: #7EB4C9;
+}
+
+.book_title_section{
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.book_img_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #105063;
+    width: 410px;
+    padding: 20px;
+    box-shadow: 0 0 8px #0A3949 inset;
+}
+
+.book_img{
+    height: 100px;
+    width: 100px;
+}
+
+.price_section{
+    margin: 20px;
+    color: #E74B3B;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 410px;
+}
+
+.favorite_icons{
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.book_data_section{
+    margin: 20px;
+}
+
+table th{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.old_comments_section{
+    margin: 20px;
+}
+
+.new_comment_section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    width: 410px;
+}
+
+.comment_input{
+    background-color: #105063;
+    color: white;
+    cursor: pointer;
+    height: 24px;
+    border: solid;
+    border-color: #51889D;
+    width: 350px;
+}
+.comment_input::placeholder{
+    color: #51889D;
+    padding-left: 8px;
+}
+
+button{
+    cursor: pointer;
+    border: 0;
+    background-color: #0A3949;
+}
+.send_button_img{
+    width: 24px;
+    width: 24px;
+}
+
+footer{
+    height: 64px;
+    background-color: #04242E;
+    color: #51889D;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: #51889D;
+    cursor: pointer;
+}
+footer a:hover{
+    color: #51889dc5;
+}
