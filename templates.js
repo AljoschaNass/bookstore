@@ -14,8 +14,11 @@ function getBookTemplate(indexBook) {
 
                 <div class="price_section">
                     <p>${books[indexBook].price} €</p>
-                    <img id="favorite" class="favorite_icons d_flex" src="./img/icons/favorite.png" alt="">
-                    <img id="no_favorite" class="favorite_icons d_none" src="./img/icons/no_favorite.png" alt="">
+                    <div class="favorite_section">
+                        <p>${books[indexBook].likes}</p>
+                        <img id="favorite" class="favorite_icons d_flex" onclick="changeFavorite(${indexBook})" src="./img/icons/favorite.png" alt="">
+                        <img id="no_favorite" class="favorite_icons d_none" onclick="changeFavorite(${indexBook})" src="./img/icons/no_favorite.png" alt="">
+                    </div>
                 </div>
 
                 <div class="book_data_section">

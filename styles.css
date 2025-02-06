@@ -97,10 +97,19 @@ header{
     width: 410px;
 }
 
+.favorite_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+}
+
 .favorite_icons{
     height: 24px;
     width: 24px;
     cursor: pointer;
+    margin-left: 4px;
 }
 
 .book_data_section{
