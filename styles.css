@@ -44,6 +44,13 @@ header{
     padding-left: 24px;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .book_section{
     display: flex;
     flex-direction: column;
@@ -53,7 +60,7 @@ header{
     border-radius: 16px;
     height: 600px;
     width: 450px;
-    margin: 12px auto;
+    margin: 12px;
     color: white;
 }
 

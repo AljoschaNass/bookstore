@@ -1,5 +1,6 @@
 
 function init() {
+    getFromLocalStorage();
     renderBooks();
 }
 
@@ -8,31 +9,34 @@ function renderBooks() {
     contentRef.innerHTML = "";
 
     for (let indexBook = 0; indexBook < books.length; indexBook++) {
-        contentRef.innerHTML += getBookTemplate(indexBook);
+        if(books[indexBook].liked) {
+            contentRef.innerHTML += getBookTemplateFavorite(indexBook);
+        } else {
+            contentRef.innerHTML += getBookTemplateNoFavorite(indexBook);
+        }
+    } 
+}
+
+function saveToLocalStorage(){
+    localStorage.setItem("books", JSON.stringify(books));
+}
+
+function getFromLocalStorage() {
+    let myBooks = JSON.parse(localStorage.getItem("books"));
+    if(myBooks != null) {
+        books = myBooks;        
     }
 }
+
 function changeFavorite(indexBook) {
     if(books[indexBook].liked) {
-        toggleFavorite();
         books[indexBook].liked = false;  
         books[indexBook].likes -= 1;
-        //renderBooks();
-    }
-    else {
-        toggleFavorite();
+        renderBooks();
+    } else {
         books[indexBook].liked = true;
         books[indexBook].likes += 1;
-        //renderBooks();
+        renderBooks();
     }
-}
-
-function toggleFavorite() {
-    let favoriteRef = document.getElementById("favorite");
-    favoriteRef.classList.toggle("d_none");
-    favoriteRef.classList.toggle("d_flex");
-
-
-    let noFavoriteRef = document.getElementById("no_favorite");
-    noFavoriteRef.classList.toggle("d_none");
-    noFavoriteRef.classList.toggle("d_flex");
+    saveToLocalStorage();
 }
