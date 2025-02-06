@@ -32,13 +32,12 @@ function getBookTemplateFavorite(indexBook) {
 
                 <div class="old_comments_section">
                     <h3>Kommentare:</h3>
-                    <table>
-                        <tbody>
-                            <tr><td>[Kevin]</td><td>: Hallo, ich mag Bananas</td></tr>
-                            <tr><td>[Kevin]</td><td>: LBJkb akjkba</td></tr>
-                            <tr><td>[Leser123]</td><td>: Fantastische Buch</td></tr>
-                        </tbody>
-                    </table>
+                     <div class="all_comments">
+                        <table>
+                            <tbody id="comments_book_${indexBook}">
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
                 <div class="new_comment_section">
@@ -83,13 +82,12 @@ function getBookTemplateNoFavorite(indexBook) {
 
                 <div class="old_comments_section">
                     <h3>Kommentare:</h3>
-                    <table>
-                        <tbody>
-                            <tr><td>[Kevin]</td><td>: Hallo, ich mag Bananas</td></tr>
-                            <tr><td>[Kevin]</td><td>: LBJkb akjkba</td></tr>
-                            <tr><td>[Leser123]</td><td>: Fantastische Buch</td></tr>
-                        </tbody>
-                    </table>
+                    <div class="all_comments">
+                        <table>
+                            <tbody id="comments_book_${indexBook}">
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
                 <div class="new_comment_section">
@@ -97,5 +95,14 @@ function getBookTemplateNoFavorite(indexBook) {
                     <button><img class="send_button_img" src="./img/icons/send_button.png" alt="send_button"></button>
                 </div>
             </div>
+        `;
+}
+
+function getCommentsTemplate(indexBook, indexComments) {
+    return `
+            <tr>
+                <td>[${books[indexBook].comments[indexComments].name}]</td>
+                <td>: ${books[indexBook].comments[indexComments].comment}</td>
+            </tr>
         `;
 }

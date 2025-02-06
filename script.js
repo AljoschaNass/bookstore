@@ -11,10 +11,22 @@ function renderBooks() {
     for (let indexBook = 0; indexBook < books.length; indexBook++) {
         if(books[indexBook].liked) {
             contentRef.innerHTML += getBookTemplateFavorite(indexBook);
+            
         } else {
             contentRef.innerHTML += getBookTemplateNoFavorite(indexBook);
         }
+        renderComments(indexBook);
     } 
+}
+
+function renderComments(indexBook) {
+    let commentsId = "comments_book_" + indexBook;    
+    let commentsRef = document.getElementById(commentsId);
+    commentsRef.innerHTML = "";
+
+    for (let indexComments = 0; indexComments < books[indexBook].comments.length; indexComments++) {
+        commentsRef.innerHTML += getCommentsTemplate(indexBook, indexComments);
+    }
 }
 
 function saveToLocalStorage(){
