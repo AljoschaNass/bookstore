@@ -1,8 +1,15 @@
+@font-face {
+    font-family: Raleway;
+    src: url(./fonts/Raleway/Raleway-VariableFont_wght.ttf)
+  }
+
 *{
+    box-sizing: border-box;
     margin: 0;
 }
 body{
     background-color: #021821;
+    font-family: "Raleway", serif;
 }
 
 .d_none{
@@ -37,11 +44,16 @@ body{
 
 header{
     display: flex;
+    justify-content: center;
     align-items: center;
     background-color: #04242E;
     color: white;
     height: 64px;
-    padding-left: 24px;
+    gap: 12px;    
+}
+
+header h1{
+    color: #E74B3B;
 }
 
 .content {
@@ -84,7 +96,7 @@ header{
     justify-content: center;
     align-items: center;
     background-color: #105063;
-    width: 410px;
+    width: 450px;
     padding: 20px;
     box-shadow: 0 0 8px #0A3949 inset;
 }
@@ -133,7 +145,7 @@ table tr{
 }
 
 .old_comments_section{
-    margin: 8px 20px 5px 20px;
+    margin: 8px 8px 5px 20px;
 }
 
 .all_comments {
@@ -151,6 +163,11 @@ table tr{
     width: 410px;
 }
 
+.inputs{
+    display: flex;
+    justify-content: flex-start;
+}
+
 .comment_input{
     background-color: #105063;
     color: white;
@@ -158,9 +175,24 @@ table tr{
     height: 24px;
     border: solid;
     border-color: #51889D;
-    width: 350px;
+    width: 260px;
 }
+
 .comment_input::placeholder{
+    color: #51889D;
+    padding-left: 8px;
+}
+
+.name_input{
+    background-color: #105063;
+    color: white;
+    cursor: pointer;
+    height: 24px;
+    border: solid;
+    border-color: #51889D;
+    width: 100px;
+}
+.name_input::placeholder{
     color: #51889D;
     padding-left: 8px;
 }
@@ -183,6 +215,8 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
+    padding: 0 8px;
 }
 
 footer a{
@@ -192,4 +226,80 @@ footer a{
 }
 footer a:hover{
     color: #51889dc5;
+}
+
+@media(max-width: 500px){
+    header{
+        height: 56px;
+        gap: 8px;    
+    }
+
+    h1{
+        font-size: 24px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 16px;
+    }
+    .content{
+        font-size: 12px;
+    }
+    .book_section{
+        border-radius: 12px;
+        height: 400px;
+        width: 300px;
+        margin: 8px;
+    }
+    .book_title_section{
+        margin: 12px 0;
+    }
+    .book_img_section{
+        width: 300px;
+        padding: 12px;
+    }
+    .book_img{
+        height: 90px;
+        width: 90px;
+    }
+    .price_section{
+        margin: 4px 12px;
+        font-size: 18px;
+        width: 276px;
+    }
+    .book_data_section{
+        margin: 4px 12px;
+    }
+    .old_comments_section{
+        margin: 4px 4px 4px 12px;
+    }
+    .all_comments {
+        height: 76px;
+    }
+    .new_comment_section{
+        margin: 0 12px 12px 12px;
+        width: 276px;
+    }
+    .name_input{
+        height: 18px;
+        width: 60px;
+    }
+    .name_input::placeholder{
+        padding-left: 4px;
+    }
+    .comment_input{
+        height: 18px;
+        width: 180px;
+    }
+    .comment_input::placeholder{
+        padding-left: 4px;
+    }
+    .send_button_img{
+        width: 20px;
+        width: 20px;
+    }
+    footer{
+        height: 56px;
+    }
 }

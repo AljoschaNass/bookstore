@@ -57,16 +57,30 @@ function addComment(indexBook) {
     let commentInputId = "comment_input_" + indexBook;    
     let commentInputRef = document.getElementById(commentInputId);
     let commentInput = commentInputRef.value;
+
+    let nameInputId = "name_input_" + indexBook;    
+    let nameInputRef = document.getElementById(nameInputId);
+    let nameInput = nameInputRef.value;
     
-    if(commentInput != "") {
+    if((commentInput != "") && (nameInput != "")) {
         books[indexBook].comments.push({
-            "name": "Gast",
+            "name": nameInput,
             "comment": commentInput
           });
 
         commentInputRef.value = "";
+        nameInputRef.value = "";
 
         saveToLocalStorage();
         renderComments(indexBook);
+    }
+    if((commentInput == "") && (nameInput == "")){
+        alert('Schreibe deinen Namen und einen Kommentar.');
+    } if ((commentInput == "") && !(nameInput == "")) {
+        alert('Schreibe einen Kommentar.');
+
+    } if(!(commentInput == "") && (nameInput == "")) {
+        alert('Trage deinen Namen ein.');
+
     }
 }
