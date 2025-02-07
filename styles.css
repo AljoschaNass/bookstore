@@ -95,7 +95,7 @@ header{
 }
 
 .price_section{
-    margin: 20px;
+    margin: 8px 20px;
     color: #E74B3B;
     font-size: 24px;
     display: flex;
@@ -120,7 +120,7 @@ header{
 }
 
 .book_data_section{
-    margin: 20px;
+    margin: 8px 20px;
 }
 
 table th{
@@ -133,11 +133,11 @@ table tr{
 }
 
 .old_comments_section{
-    margin: 20px 20px 5px 20px;
+    margin: 8px 20px 5px 20px;
 }
 
 .all_comments {
-    max-height: 100px;
+    height: 176px;
     display: flex;
     flex-direction: column;
     overflow-y: auto
@@ -170,6 +170,7 @@ button{
     border: 0;
     background-color: #0A3949;
 }
+
 .send_button_img{
     width: 24px;
     width: 24px;

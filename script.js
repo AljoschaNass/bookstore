@@ -52,3 +52,21 @@ function changeFavorite(indexBook) {
     }
     saveToLocalStorage();
 }
+
+function addComment(indexBook) {
+    let commentInputId = "comment_input_" + indexBook;    
+    let commentInputRef = document.getElementById(commentInputId);
+    let commentInput = commentInputRef.value;
+    
+    if(commentInput != "") {
+        books[indexBook].comments.push({
+            "name": "Gast",
+            "comment": commentInput
+          });
+
+        commentInputRef.value = "";
+
+        saveToLocalStorage();
+        renderComments(indexBook);
+    }
+}

@@ -41,8 +41,8 @@ function getBookTemplateFavorite(indexBook) {
                 </div>
 
                 <div class="new_comment_section">
-                    <input id="comment_input" class="comment_input" type="text" placeholder="Schreibe dein Kommentar...">
-                    <button><img class="send_button_img" src="./img/icons/send_button.png" alt="send_button"></button>
+                    <input id="comment_input_${indexBook}" class="comment_input" type="text" placeholder="Schreibe dein Kommentar...">
+                    <button onclick="addComment(${indexBook})"><img class="send_button_img" src="./img/icons/send_button.png" alt="send_button"></button>
                 </div>
             </div>
         `;
@@ -91,8 +91,8 @@ function getBookTemplateNoFavorite(indexBook) {
                 </div>
 
                 <div class="new_comment_section">
-                    <input id="comment_input" class="comment_input" type="text" placeholder="Schreibe dein Kommentar...">
-                    <button><img class="send_button_img" src="./img/icons/send_button.png" alt="send_button"></button>
+                    <input id="comment_input_${indexBook}" class="comment_input" type="text" placeholder="Schreibe dein Kommentar...">
+                    <button onclick="addComment(${indexBook})"><img class="send_button_img" src="./img/icons/send_button.png" alt="send_button"></button>
                 </div>
             </div>
         `;
