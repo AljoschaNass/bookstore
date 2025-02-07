@@ -67,20 +67,21 @@ function addComment(indexBook) {
             "name": nameInput,
             "comment": commentInput
           });
-
         commentInputRef.value = "";
         nameInputRef.value = "";
 
         saveToLocalStorage();
         renderComments(indexBook);
     }
+    sendAlert(nameInput, commentInput)
+}
+
+function sendAlert(nameInput, commentInput) {
     if((commentInput == "") && (nameInput == "")){
         alert('Schreibe deinen Namen und einen Kommentar.');
     } if ((commentInput == "") && !(nameInput == "")) {
         alert('Schreibe einen Kommentar.');
-
     } if(!(commentInput == "") && (nameInput == "")) {
         alert('Trage deinen Namen ein.');
-
     }
 }
